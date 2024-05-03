@@ -1,18 +1,28 @@
-# StarSchema
+# StarSchema para Power BI 🌟
 
-Foi proposto o seguinte problema:
+## Problema Proposto 🤔
+Dado um esquema de banco de dados contendo as tabelas: **Professor** 👨‍🏫, **Departamento** 🏢, **Curso** 📚, **Disciplina** 📖 e **Aluno** 👩‍🎓, com as seguintes relações:
+- **Professor** tem relação 1:N com **Departamento** e **Disciplina**.
+- **Curso** tem relação N:M com **Disciplina**.
+- **Disciplina** tem relação N:M com **Pre_Requisito** e **Aluno**.
 
-* O esquema possui a tabela Professor, Departamento, Curso, Disciplina e Aluno;
-* A tabela Professor tem relacionamento 1:N com a tabela Departamento e a tabela Disciplina;
-* A tabela Curso tem relação com N:M com Disciplina;
-* A tabela Disciplina tem relação N:M com a tabela Pre_Requisito e a tabela Aluno.
+![Alt text](image.png)
 
-Transforme este esquema tradicional para o StarSchema indicado para o Power BI.
+O objetivo é converter este esquema tradicional em um Star Schema otimizado para análises no Power BI.
 
-Para transformar um ER (modelo de entidade-relacionamento) como o da foto em um modelo Star Schema para o Power BI, com a tabela fato sendo "Professor":
+## Conversão para Star Schema 🛠️
+Para efetuar a conversão para um modelo Star Schema, onde a tabela "Professor" é a tabela fato, siga os passos:
 
-1. **Identifique as tabelas de dimensão**: No seu caso, as tabelas "Departamento", "Curso", "Disciplina" e "Aluno" podem ser consideradas como tabelas de dimensão.
-2. **Defina a tabela fato**: A tabela “Professor” será a sua tabela fato. Inclua chaves estrangeiras referenciando as tabelas de dimensão.
-3. **Estabeleça as relações**: Assegure-se que todas as relações entre a tabela fato e as tabelas de dimensão sejam do tipo um para muitos (1:M).
-4. **Inclua medidas na tabela fato**: Estas podem ser contagens, somas ou outras agregações dos dados relacionados às entradas específicas na tabela “Professor”.
-5. **Importe para o Power BI**: Importe este modelo para o Power BI e construa suas visualizações com base nas tabelas de dimensão e medidas na tabela fato.
+1. **Tabelas de Dimensão**: Identifique as tabelas "Departamento" 🏢, "Curso" 📚, "Disciplina" 📖 e "Aluno" 👩‍🎓 como dimensões.
+2. **Tabela Fato**: Defina "Professor" 👨‍🏫 como a tabela fato central. Esta deve conter chaves estrangeiras que referenciam as dimensões.
+3. **Relacionamentos**: Garanta que os relacionamentos entre a tabela fato e as dimensões sejam exclusivamente do tipo 1:M (um para muitos) 🔗.
+4. **Medidas na Tabela Fato**: Inclua medidas agregadas, como contagens ou somas, que representem informações relevantes dos professores 📊.
+5. **Implementação no Power BI**: Importe o modelo Star Schema para o Power BI. Utilize as dimensões e medidas para criar visualizações dinâmicas e insights valiosos 📈.
+
+Lembre-se de que, no Power BI, as tabelas de dimensão:
+*   Ajudam a filtrar e segmentar os dados, enquanto a tabela fato concentra as métricas chave para análise 🔍.
+*   Simplifica as consultas: Reduz a necessidade de operações de join complexas, tornando as consultas mais rápidas e fáceis de entender.
+*   Melhora o desempenho: A estrutura desnormalizada acelera o tempo de resposta para relatórios e análises.
+*   Facilita a compreensão do usuário: A clareza do modelo ajuda os usuários finais a localizar e analisar os dados necessários com mais eficiência.
+
+![Alt text](image-1.png)
