@@ -19,10 +19,12 @@ Para efetuar a conversão para um modelo Star Schema, onde a tabela "Professor" 
 4. **Medidas na Tabela Fato**: Inclua medidas agregadas, como contagens ou somas, que representem informações relevantes dos professores 📊.
 5. **Implementação no Power BI**: Importe o modelo Star Schema para o Power BI. Utilize as dimensões e medidas para criar visualizações dinâmicas e insights valiosos 📈.
 
+![Alt text](image-1.png)
+
 Lembre-se de que, no Power BI, as tabelas de dimensão:
 *   Ajudam a filtrar e segmentar os dados, enquanto a tabela fato concentra as métricas chave para análise 🔍.
 *   Simplifica as consultas: Reduz a necessidade de operações de join complexas, tornando as consultas mais rápidas e fáceis de entender.
 *   Melhora o desempenho: A estrutura desnormalizada acelera o tempo de resposta para relatórios e análises.
 *   Facilita a compreensão do usuário: A clareza do modelo ajuda os usuários finais a localizar e analisar os dados necessários com mais eficiência.
 
-![Alt text](image-1.png)
+![Alt text](image-2.png)
